@@ -29,8 +29,9 @@ print()
 
 
 def battle_test(
-        factory_1: CreatureFactory, factory_2: CreatureFactory
-        ) -> None:
+        factory_1: CreatureFactory,
+        factory_2: CreatureFactory
+) -> None:
     """Battle test between creatures created by two different factories"""
 
     print("Testing battle")
