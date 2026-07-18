@@ -8,6 +8,10 @@ from .capabilities.heal import HealCapability
 class Sproutling(Creature, HealCapability):
     """Class for Sproutling creature"""
 
+    def __init__(self) -> None:
+        Creature.__init__(self)
+        HealCapability.__init__(self)
+
     def attack(self) -> str:
         return f"{self._name} uses Vine Whip!"
 
@@ -17,6 +21,10 @@ class Sproutling(Creature, HealCapability):
 
 class Bloomelle(Creature, HealCapability):
     """Class for Bloomelle creature"""
+
+    def __init__(self) -> None:
+        Creature.__init__(self)
+        HealCapability.__init__(self)
 
     def attack(self) -> str:
         return f"{self._name} uses Petal Dance!"
