@@ -20,10 +20,8 @@ class TransformCapability(ABC):
 
     @abstractmethod
     def transform(self) -> str:
-        self._is_transformed = True
         pass
 
     @abstractmethod
     def revert(self) -> str:
-        self._is_transformed = False
         pass
