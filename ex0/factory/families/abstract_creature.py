@@ -15,4 +15,4 @@ class Creature(ABC):
         pass
 
     def describe(self) -> str:
-        return f"{self._name} is {self._type} type Creature"
+        return f"{self._name} is a {self._type} type Creature"

@@ -1,7 +1,7 @@
 """Holds FlameFactory class"""
 
 from .abstract_factory import CreatureFactory
-from families import Flameling, Pyrodon
+from .families import Flameling, Pyrodon
 
 
 class FlameFactory(CreatureFactory):

@@ -1,7 +1,7 @@
 """Holds AquaFactory class"""
 
 from .abstract_factory import CreatureFactory
-from families import Aquabub, Torragon
+from .families import Aquabub, Torragon
 
 
 class AquaFactory(CreatureFactory):
