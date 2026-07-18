@@ -14,5 +14,5 @@ class Creature(Protocol):
 class HealCapability(ABC):
 
     @abstractmethod
-    def heal(self, target: Creature) -> str:
+    def heal(self) -> str:
         pass
