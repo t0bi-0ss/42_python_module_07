@@ -6,9 +6,9 @@ from abc import ABC, abstractmethod
 class Creature(ABC):
     """Abstract class for every type of creature"""
 
-    def __init__(self, name: str, type: str) -> None:
-        self._name = name
-        self._type = type
+    def __init__(self) -> None:
+        self._name = ""
+        self._type = ""
 
     @abstractmethod
     def attack(self) -> str:
