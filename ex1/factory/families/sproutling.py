@@ -1,4 +1,4 @@
-"""Holds all classes for the 'Spoutling' creature family"""
+"""Holds all classes for the 'Sproutling' creature family"""
 
 from .abstract_creature import Creature
 
