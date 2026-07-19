@@ -1,6 +1,6 @@
 """Test new scenario"""
 
-from factory import TransformCreatureFactory, HealingCreatureFactory
+from ex1 import TransformCreatureFactory, HealingCreatureFactory
 
 # Create healing Creature factory
 healing_factory = HealingCreatureFactory()

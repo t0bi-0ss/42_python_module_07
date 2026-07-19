@@ -1,4 +1,4 @@
-from factory import AquaFactory, FlameFactory, CreatureFactory
+from ex0 import AquaFactory, FlameFactory, CreatureFactory
 
 
 """Test ex0 package"""
