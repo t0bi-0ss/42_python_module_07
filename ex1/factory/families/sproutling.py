@@ -11,6 +11,8 @@ class Sproutling(Creature, HealCapability):
     def __init__(self) -> None:
         Creature.__init__(self)
         HealCapability.__init__(self)
+        self._name: str = "Sproutling"
+        self._type: str = "Grass"
 
     def attack(self) -> str:
         return f"{self._name} uses Vine Whip!"
@@ -25,6 +27,8 @@ class Bloomelle(Creature, HealCapability):
     def __init__(self) -> None:
         Creature.__init__(self)
         HealCapability.__init__(self)
+        self._name: str = "Bloomelle"
+        self._type: str = "Grass/Fairy"
 
     def attack(self) -> str:
         return f"{self._name} uses Petal Dance!"
