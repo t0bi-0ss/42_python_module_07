@@ -2,7 +2,7 @@
 
 from .abstract_factory import CreatureFactory
 
-from .families import shiftling
+from .capable_families import shiftling
 
 
 class TransformCreatureFactory(CreatureFactory):

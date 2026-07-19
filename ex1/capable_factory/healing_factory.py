@@ -2,7 +2,7 @@
 
 from .abstract_factory import CreatureFactory
 
-from .families import sproutling
+from .capable_families import sproutling
 
 
 class HealingCreatureFactory(CreatureFactory):

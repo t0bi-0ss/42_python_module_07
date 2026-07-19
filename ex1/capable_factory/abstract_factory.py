@@ -1,7 +1,7 @@
 """Holds abstract class for every type of Factory"""
 
 from abc import ABC, abstractmethod
-from .families.abstract_creature import Creature
+from ex0.factory.families.abstract_creature import Creature
 
 
 class CreatureFactory(ABC):

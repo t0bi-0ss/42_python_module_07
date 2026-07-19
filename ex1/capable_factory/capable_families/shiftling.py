@@ -1,6 +1,6 @@
 """Holds all classes for the 'Shiftling' creature family"""
 
-from .abstract_creature import Creature
+from ex0.factory.families.abstract_creature import Creature
 
 from .capabilities.transform import TransformCapability
 

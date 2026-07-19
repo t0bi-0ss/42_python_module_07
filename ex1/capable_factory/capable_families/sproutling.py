@@ -1,6 +1,6 @@
 """Holds all classes for the 'Sproutling' creature family"""
 
-from .abstract_creature import Creature
+from ex0.factory.families.abstract_creature import Creature
 
 from .capabilities.heal import HealCapability
 
