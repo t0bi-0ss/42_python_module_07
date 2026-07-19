@@ -9,7 +9,7 @@ class HealingCreatureFactory(CreatureFactory):
     """HealingCreatureFactory class"""
 
     def create_base(self) -> sproutling.Sproutling:
-        return sproutling.Sproutling
+        return sproutling.Sproutling()
 
     def create_evolved(self) -> sproutling.Bloomelle:
-        return sproutling.Bloomelle
+        return sproutling.Bloomelle()
