@@ -16,6 +16,9 @@ class NormalStrategy(BattleStrategy):
 
     def act(self, creature: Creature) -> str:
         if not self.is_valid(creature):
-            raise InvalidCombination
+            raise InvalidCombination(
+                creature._name,
+                NormalStrategy.__name__.removesuffix("Strategy")
+            )
         else:
             return creature.attack()

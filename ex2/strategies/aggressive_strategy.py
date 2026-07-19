@@ -17,7 +17,10 @@ class AggressiveStrategy(BattleStrategy):
 
     def act(self, creature: Creature) -> str:
         if not self.is_valid(creature):
-            raise InvalidCombination
+            raise InvalidCombination(
+                creature._name,
+                AggressiveStrategy.__name__.removesuffix("Strategy")
+            )
         else:
             return f"{creature.transform()}\n" \
                 f"{creature.attack()}\n{creature.revert()}"
