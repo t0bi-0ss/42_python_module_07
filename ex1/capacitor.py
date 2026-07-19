@@ -10,19 +10,19 @@ def healing_factory_test(factory: HealingCreatureFactory) -> None:
     """Runs test"""
 
     # Create base creature
-    creature = factory.create_base()
+    base_form = factory.create_base()
     print("Testing Creature with healing capability")
     print(" base:")
-    print(creature.describe())
-    print(creature.attack())
-    print(creature.heal())
+    print(base_form.describe())
+    print(base_form.attack())
+    print(base_form.heal())
 
     # Create evolved creature
-    creature = factory.create_evolved()
+    evolved_form = factory.create_evolved()
     print(" evolved:")
-    print(creature.describe())
-    print(creature.attack())
-    print(creature.heal())
+    print(evolved_form.describe())
+    print(evolved_form.attack())
+    print(evolved_form.heal())
 
 
 healing_factory_test(healing_factory)
@@ -37,23 +37,23 @@ def transforming_factory_test(factory: TransformCreatureFactory) -> None:
     """Runs small test"""
 
     # Create base creature
-    creature = factory.create_base()
+    base_form = factory.create_base()
     print("Testing Creature with transform capability")
     print(" base:")
-    print(creature.describe())
-    print(creature.attack())
-    print(creature.transform())
-    print(creature.attack())
-    print(creature.revert())
+    print(base_form.describe())
+    print(base_form.attack())
+    print(base_form.transform())
+    print(base_form.attack())
+    print(base_form.revert())
 
     # Create evolved creature
-    creature = factory.create_evolved()
+    evolved_form = factory.create_evolved()
     print(" evolved:")
-    print(creature.describe())
-    print(creature.attack())
-    print(creature.transform())
-    print(creature.attack())
-    print(creature.revert())
+    print(evolved_form.describe())
+    print(evolved_form.attack())
+    print(evolved_form.transform())
+    print(evolved_form.attack())
+    print(evolved_form.revert())
 
 
 transforming_factory_test(transforming_factory)
