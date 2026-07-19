@@ -5,6 +5,8 @@ from ex0 import FlameFactory, AquaFactory, CreatureFactory
 
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
 
+from typing import Any, Sequence
+
 # Create creature factories
 flame_factory = FlameFactory()
 aqua_factory = AquaFactory()
@@ -19,7 +21,7 @@ defensive_strategy = DefensiveStrategy()
 
 # Single battle function
 def singe_battle(
-        opponents: list[tuple[CreatureFactory, BattleStrategy]]
+        opponents: Sequence[tuple[CreatureFactory, BattleStrategy[Any]]]
 ) -> None:
 
     print("*** Tournament ***")
