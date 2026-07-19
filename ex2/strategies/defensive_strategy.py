@@ -1,20 +1,18 @@
 """Holds DefensiveStrategy battle strategy class"""
 
-from .battle_strategy import Creature, InvalidCombination, BattleStrategy
+from ex1.capable_factory.capable_families import Sproutling, \
+    Bloomelle
 
-# from typing import Protocol
-
-
-# class HealingCreature(Creature, Protocol):
-
-#     def heal(self) -> str:
-#         ...
+from .battle_strategy import InvalidCombination, BattleStrategy
 
 
-class DefensiveStrategy(BattleStrategy):
+class DefensiveStrategy(BattleStrategy[Sproutling | Bloomelle]):
     """DefensiveStrategy battle strategy class"""
 
-    def is_valid(self, creature: Creature) -> bool:
+    def is_valid(
+        self,
+        creature: Sproutling | Bloomelle
+    ) -> bool:
         try:
             creature.heal()
         except AttributeError:
@@ -22,7 +20,10 @@ class DefensiveStrategy(BattleStrategy):
         else:
             return True
 
-    def act(self, creature: Creature) -> str:
+    def act(
+        self,
+        creature: Sproutling | Bloomelle
+    ) -> str:
         if not self.is_valid(creature):
             raise InvalidCombination(
                 creature._name,

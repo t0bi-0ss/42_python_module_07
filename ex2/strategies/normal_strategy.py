@@ -1,9 +1,11 @@
 """Holds NormalStrategy battle strategy class"""
 
-from .battle_strategy import BattleStrategy, Creature, InvalidCombination
+from .battle_strategy import BattleStrategy, InvalidCombination
+
+from ex0.factory.families import Creature
 
 
-class NormalStrategy(BattleStrategy):
+class NormalStrategy(BattleStrategy[Creature]):
     """NormalStrategy battle strategy class"""
 
     def is_valid(self, creature: Creature) -> bool:
@@ -14,7 +16,10 @@ class NormalStrategy(BattleStrategy):
         else:
             return True
 
-    def act(self, creature: Creature) -> str:
+    def act(
+        self,
+        creature: Creature
+    ) -> str:
         if not self.is_valid(creature):
             raise InvalidCombination(
                 creature._name,

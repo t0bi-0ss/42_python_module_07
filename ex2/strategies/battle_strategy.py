@@ -2,7 +2,12 @@
 
 from abc import ABC, abstractmethod
 
-from typing import Protocol
+from typing import TypeVar, Generic
+
+from ex0.factory.families.abstract_creature import Creature
+
+
+T = TypeVar('T', bound=Creature)
 
 
 class InvalidCombination(Exception):
@@ -19,26 +24,19 @@ class InvalidCombination(Exception):
             f"for this {self.strategy_name} strategy"
 
 
-class Creature(Protocol):
-    """Protocol class for every type of creature"""
-
-    _name: str
-    _type: str
-
-    def attack(self) -> str:
-        ...
-
-    def describe(self) -> str:
-        ...
-
-
-class BattleStrategy(ABC):
+class BattleStrategy(ABC, Generic[T]):
     """BattleStrategy abstract class"""
 
     @abstractmethod
-    def is_valid(self, creature: Creature) -> bool:
+    def is_valid(
+        self,
+        creature: T
+    ) -> bool:
         pass
 
     @abstractmethod
-    def act(self, creature: Creature) -> str:
+    def act(
+        self,
+        creature: T
+    ) -> str:
         pass

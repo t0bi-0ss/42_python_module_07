@@ -1,12 +1,17 @@
 """Holds AggressiveStrategy battle strategy class"""
 
-from .battle_strategy import BattleStrategy, Creature, InvalidCombination
+from .battle_strategy import BattleStrategy, InvalidCombination
+
+from ex1.capable_factory.capable_families import Shiftling, Morphagon
 
 
-class AggressiveStrategy(BattleStrategy):
+class AggressiveStrategy(BattleStrategy[Shiftling | Morphagon]):
     """AggressiveStrategy battle strategy class"""
 
-    def is_valid(self, creature: Creature) -> bool:
+    def is_valid(
+        self,
+        creature: Shiftling | Morphagon
+    ) -> bool:
         try:
             creature.transform()
             creature.revert()
@@ -15,7 +20,10 @@ class AggressiveStrategy(BattleStrategy):
         else:
             return True
 
-    def act(self, creature: Creature) -> str:
+    def act(
+        self,
+        creature: Shiftling | Morphagon
+    ) -> str:
         if not self.is_valid(creature):
             raise InvalidCombination(
                 creature._name,
