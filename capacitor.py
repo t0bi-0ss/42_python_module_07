@@ -12,14 +12,22 @@ def healing_factory_test(factory: HealingCreatureFactory) -> None:
     # Create base creature
     base_form = factory.create_base()
     print("Testing Creature with healing capability")
-    print(" base:")
+
+    print(f"\n Go!\n{base_form._name}!!!\n")
+
     print(base_form.describe())
     print(base_form.attack())
     print(base_form.heal())
 
     # Create evolved creature
     evolved_form = factory.create_evolved()
-    print(" evolved:")
+
+    print(f"\nWhat?\n{base_form._name} is evolving!")
+    print(
+        f"\nCongratulations!\nYour {base_form._name} "
+        f"evolved into {evolved_form._name}\n"
+    )
+
     print(evolved_form.describe())
     print(evolved_form.attack())
     print(evolved_form.heal())
@@ -39,7 +47,9 @@ def transforming_factory_test(factory: TransformCreatureFactory) -> None:
     # Create base creature
     base_form = factory.create_base()
     print("Testing Creature with transform capability")
-    print(" base:")
+
+    print(f"\n Go!\n{base_form._name}!!!\n")
+
     print(base_form.describe())
     print(base_form.attack())
     print(base_form.transform())
@@ -48,7 +58,13 @@ def transforming_factory_test(factory: TransformCreatureFactory) -> None:
 
     # Create evolved creature
     evolved_form = factory.create_evolved()
-    print(" evolved:")
+
+    print(f"\nWhat?\n{base_form._name} is evolving!")
+    print(
+        f"\nCongratulations!\nYour {base_form._name} "
+        f"evolved into {evolved_form._name}\n"
+    )
+
     print(evolved_form.describe())
     print(evolved_form.attack())
     print(evolved_form.transform())
