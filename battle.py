@@ -50,7 +50,7 @@ def battle_test(
     print(creature_1.attack())
     print("Is not very effective...")
     print(creature_2.attack())
-    print("Is supper effective!!!")
+    print("Is super effective!!!")
 
 
 battle_test(flame_factory, aqua_factory)
