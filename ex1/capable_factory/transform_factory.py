@@ -1,6 +1,6 @@
 """Holds TransformCreatureFactory class"""
 
-from .abstract_factory import CreatureFactory
+from ex0.factory.abstract_factory import CreatureFactory
 
 from .capable_families import shiftling
 
